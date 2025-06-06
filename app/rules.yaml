@@ -1,0 +1,28 @@
+---
+rules:
+  default_rule_set:
+    culture:
+      GREG:
+        simple_condition: input.cultura=="europa"
+        action: set_culture
+        action_parameters:
+          cultura: "griega"
+      UNKNOW:
+        simple_condition: null
+        action: set_culture
+        action_parameters:
+          cultura: "desconocido"
+    archetype:
+      HERO:
+        simple_condition: input.cultura=="griega"
+        action: set_archetype
+        action_parameters:
+          arch: "héroe"
+      UNKNOWN:
+        simple_condition: null
+        action: set_archetype
+        action_parameters:
+          arch: "desconocido"
+
+actions_source_modules:
+  - act.actions

@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    { "id": "Zeus", "type": "dios", "cultura": "griega" },
+    { "id": "Thor", "type": "dios", "cultura": "nórdica" }
+  ],
+  "edges": [
+    {
+      "from": "Zeus",
+      "to": "Zeus_style",
+      "relation": "arquetipo_representativo"
+    },
+    {
+      "from": "Thor",
+      "to": "Thor_style",
+      "relation": "arquetipo_representativo"
+    }
+  ]
+}
