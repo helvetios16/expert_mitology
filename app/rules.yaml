@@ -1,6 +1,56 @@
 ---
 rules:
   default_rule_set:
+    # ¿Qué tipo de mundo prefieres?
+    world:
+      DARK:
+        simple_condition: input.land=="oscuro"
+        action: set_world
+        action_parameters:
+          cultura: "nordica,celta"
+      BALANCE:
+        simple_condition: input.land=="equilibrado"
+        action: set_world
+        action_parameters:
+          cultura: "griega,hindu"
+      LIGHT:
+        simple_condition: input.land=="luminoso"
+        action: set_world
+        action_parameters:
+          cultura: "egipcia,inca"
+      UNKNOWN:
+        simple_condition: null
+        action: set_world
+        action_parameters:
+          cultura: "desconocido"
+    # ¿Cuál de estos valores resuena más contigo?
+    values:
+      HONOR:
+        simple_condition: input.values=="honor"
+        action: set_values
+        action_parameters:
+          value: "heroe,guerrero"
+      WISDOM:
+        simple_condition: input.values=="sabiduria"
+        action: set_values
+        action_parameters:
+          value: "sabio,mentor"
+      CAOS:
+        simple_condition: input.values=="caos"
+        action: set_values
+        action_parameters:
+          value: "tricker"
+      COMPASSION:
+        simple_condition: input.values=="compasion"
+        action: set_values
+        action_parameters:
+          values: "redentor,martir"
+      UNKNOWN:
+        simple_condition: null
+        action: set_values
+        action_parameters:
+          cultura: "desconocido"
+
     culture:
       GREG:
         simple_condition: input.cultura=="europa"

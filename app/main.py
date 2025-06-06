@@ -21,7 +21,9 @@ for edge in data["edges"]:
 
 # 🚀 2. Aplicar reglas del sistema experto
 engine = RulesEngine(config_path=".")
-user_input = {"cultura": "europa"}  # ejemplo
+
+user_input = {"land": "oscuro", "values": "sabiduria", "cultura": "europa"}
+
 result = engine.apply_rules(input_data=user_input)
 cultura = result["culture"].get("cultura")
 arch = result["archetype"].get("archetype")
