@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    { "id": "Zeus", "type": "dios", "cultura": "griega" },
+    { "id": "Grecia", "type": "cultura" },
+    { "id": "Hera", "type": "diosa", "cultura": "griega" }
+  ],
+  "edges": [
+    { "from": "Zeus", "to": "Grecia", "relation": "pertenece_a" },
+    { "from": "Hera", "to": "Grecia", "relation": "pertenece_a" },
+    { "from": "Zeus", "to": "Hera", "relation": "pareja" }
+  ]
+}
