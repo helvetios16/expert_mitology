@@ -1,0 +1,22 @@
+---
+rules:
+  default_rule_set:
+    diagnosis:
+      FLU:
+        simple_condition: input.fever == True and input.cough == True
+        action: set_diagnosis
+        action_parameters:
+          diagnosis: "Influenza"
+      COLD:
+        simple_condition: input.sneezing == True and input.cough == True
+        action: set_diagnosis
+        action_parameters:
+          diagnosis: "Resfriado común"
+      UNKNOWN:
+        simple_condition: null
+        action: set_diagnosis
+        action_parameters:
+          diagnosis: "Consulta médica recomendada"
+
+actions_source_modules:
+  - actions
