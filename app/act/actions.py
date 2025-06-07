@@ -20,15 +20,57 @@ def set_values(value: str, **kwargs: Any) -> dict[str, str]:
     return {"value": value}
 
 
-def set_culture(cultura: str, **kwargs: Any) -> dict[str, str]:
+def set_creature(creature: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define la criatura elegida.
+    """
+    return {"creature": creature}
+
+
+def set_element(element: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define el elemento elegido.
+    """
+    return {"element": element}
+
+
+def set_role(role: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define el rol elegido.
+    """
+    return {"role": role}
+
+
+def set_conflict(conflict: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define el conflicto elegido.
+    """
+    return {"conflict": conflict}
+
+
+def set_god(god: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define el dios elegido.
+    """
+    return {"god": god}
+
+
+def set_culture(culture: str, **kwargs: Any) -> dict[str, str]:
     """
     Define la cultura elegida.
     """
-    return {"cultura": cultura}
+    return {"culture": culture}
 
 
-def set_archetype(arch: str, **kwargs: Any) -> dict[str, str]:
+def set_origin(origin: str, **kwargs: Any) -> dict[str, str]:
     """
-    Define el arquetipo seleccionado.
+    Define el origen elegido.
     """
-    return {"archetype": arch}
+    return {"origin": origin}
+
+
+def set_ending(ending: str, **kwargs: Any) -> dict[str, str]:
+    """
+    Define el final elegido.
+    """
+    return {"ending": ending}

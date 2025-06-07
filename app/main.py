@@ -22,18 +22,36 @@ for edge in data["edges"]:
 # 🚀 2. Aplicar reglas del sistema experto
 engine = RulesEngine(config_path=".")
 
-user_input = {"land": "oscuro", "values": "sabiduria", "cultura": "europa"}
+user_input = {
+    "land": "oscuro",
+    "values": "sabiduria",
+    "creature": "dragon",
+    "element": "fuego",
+    "role": "sabio",
+    "conflict": "guerra",
+    "god": "solar",
+    "culture": "griega",
+    "origin": "semilla",
+    "ending": "ciclo",
+}
 
 result = engine.apply_rules(input_data=user_input)
-cultura = result["culture"].get("cultura")
-arch = result["archetype"].get("archetype")
-
 print(result)
+land = result["world"].get("cultura")
+values = result["values"].get("values")
+creature = result["creature"].get("creature")
+element = result["element"].get("element")
+role = result["role"].get("role")
+conflict = result["conflict"].get("conflict")
+god = result["god"].get("god")
+culture = result["culture"].get("culture")
+origin = result["origin"].get("origin")
+ending = result["ending"].get("ending")
 
 # 🚀 3. Consultar el grafo según la decisión
-candidatos = [
+data = [
     n
     for n, attrs in G.nodes(data=True)
-    if attrs.get("cultura") == cultura and attrs.get("type") == "dios"
+    if attrs.get("cultura") == land or attrs.get("conflicto") == conflict
 ]
-print("Candidatos dioses:", candidatos)
+print("Data:", data)

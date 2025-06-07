@@ -50,29 +50,222 @@ rules:
         action: set_values
         action_parameters:
           cultura: "desconocido"
-
-    culture:
-      GREG:
-        simple_condition: input.cultura=="europa"
-        action: set_culture
+    # ¿Qué criatura mítica te atrae más?
+    creature:
+      DRAGON:
+        simple_condition: input.creature=="dragon"
+        action: set_creature
         action_parameters:
-          cultura: "griega"
-      UNKNOW:
-        simple_condition: null
-        action: set_culture
+          creature: "dragon y china"
+      PHOENIX:
+        simple_condition: input.creature=="fenix"
+        action: set_creature
         action_parameters:
-          cultura: "desconocido"
-    archetype:
-      HERO:
-        simple_condition: input.cultura=="griega"
-        action: set_archetype
+          creature: "fenix y edad media"
+      SHADOW:
+        simple_condition: input.creature=="sombra"
+        action: set_creature
         action_parameters:
-          arch: "héroe"
+          creature: "sombra y antagonista"
+      WOLF:
+        simple_condition: input.creature=="lobo"
+        action: set_creature
+        action_parameters:
+          creature: "lobo y nordico"
       UNKNOWN:
         simple_condition: null
-        action: set_archetype
+        action: set_creature
         action_parameters:
-          arch: "desconocido"
+          creature: "desconocido"
+    # ¿Qué elemento natural te representa mejor?
+    element:
+      WATER:
+        simple_condition: input.element=="agua"
+        action: set_element
+        action_parameters:
+          element: "agua y viaje, introspección"
+      FIRE:
+        simple_condition: input.element=="fuego"
+        action: set_element
+        action_parameters:
+          element: "fuego y transformación, caos"
+      AIR:
+        simple_condition: input.element=="aire"
+        action: set_element
+        action_parameters:
+          element: "aire y ascensión, espiritualidad"
+      EARTH:
+        simple_condition: input.element=="tierra"
+        action: set_element
+        action_parameters:
+          element: "tierra y estabilidad, caída"
+      UNKNOWN:
+        simple_condition: null
+        action: set_element
+        action_parameters:
+          element: "desconocido"
+    # ¿Cuál sería el rol de tu protagonista?
+    role:
+      HERO:
+        simple_condition: input.role=="heroe"
+        action: set_role
+        action_parameters:
+          role: "heroe elegido y viaje del héroe"
+      TRICKSTER:
+        simple_condition: input.role=="antiheroe"
+        action: set_role
+        action_parameters:
+          role: "antihéroe embaucador y conflicto con dioses"
+      SAGE:
+        simple_condition: input.role=="sabio"
+        action: set_role
+        action_parameters:
+          role: "sabio ancestral y mito de origen"
+      ORPHAN:
+        simple_condition: input.role=="huerfano"
+        action: set_role
+        action_parameters:
+          role: "huérfano y linaje oculto"
+      UNKNOWN:
+        simple_condition: null
+        action: set_role
+        action_parameters:
+          role: "desconocido"
+    # ¿Qué conflicto sería central en este mundo?
+    conflict:
+      WAR:
+        simple_condition: input.conflict=="guerra"
+        action: set_conflict
+        action_parameters:
+          conflict: "guerra entre dioses y trama épica"
+      COSMIC:
+        simple_condition: input.conflict=="crisis"
+        action: set_conflict
+        action_parameters:
+          conflict: "crisis cósmica y destrucción o renacimiento"
+      BETRAYAL:
+        simple_condition: input.conflict=="traicion"
+        action: set_conflict
+        action_parameters:
+          conflict: "traición y conflicto moral"
+      SECRET:
+        simple_condition: input.conflict=="secreto"
+        action: set_conflict
+        action_parameters:
+          conflict: "secreto prohibido y búsqueda mítica"
+      UNKNOWN:
+        simple_condition: null
+        action: set_conflict
+        action_parameters:
+          conflict: "desconocido"
+    # ¿Qué tipo de dios sería el más poderoso?
+    god:
+      SOLAR:
+        simple_condition: input.god=="solar"
+        action: set_god
+        action_parameters:
+          god: "dios solar y mito fundacional egipcio o inca"
+      DUAL:
+        simple_condition: input.god=="dual"
+        action: set_god
+        action_parameters:
+          god: "dios dual y cultura mesoamericana o hindú"
+      NATURAL:
+        simple_condition: input.god=="natural"
+        action: set_god
+        action_parameters:
+          god: "dios natural y cultura animista"
+      CHAOTIC:
+        simple_condition: input.god=="caotico"
+        action: set_god
+        action_parameters:
+          god: "dios caótico y cultura nórdica"
+      UNKNOWN:
+        simple_condition: null
+        action: set_god
+        action_parameters:
+          god: "desconocido"
 
+    # ¿Qué cultura real te inspira más?
+    culture:
+      GREEK:
+        simple_condition: input.culture=="griega"
+        action: set_culture
+        action_parameters:
+          culture: "griega y dioses humanos"
+      EGYPTIAN:
+        simple_condition: input.culture=="egipcia"
+        action: set_culture
+        action_parameters:
+          culture: "egipcia y orden cósmico"
+      JAPANESE:
+        simple_condition: input.culture=="japonesa"
+        action: set_culture
+        action_parameters:
+          culture: "japonesa y espíritus"
+      OTHER:
+        simple_condition: input.culture=="otra"
+        action: set_culture
+        action_parameters:
+          culture: "sincretismo y aleatorio"
+      UNKNOWN:
+        simple_condition: null
+        action: set_culture
+        action_parameters:
+          culture: "desconocido"
+    # ¿Cómo empieza el mito principal?
+    origin:
+      DIVINE_SEED:
+        simple_condition: input.origin=="semilla"
+        action: set_origin
+        action_parameters:
+          origin: "semilla divina y dios creador"
+      REBELLION:
+        simple_condition: input.origin=="rebeldia"
+        action: set_origin
+        action_parameters:
+          origin: "rebelión y guerra divina"
+      FORBIDDEN_LINEAGE:
+        simple_condition: input.origin=="linaje"
+        action: set_origin
+        action_parameters:
+          origin: "linaje prohibido y héroe oculto"
+      REBIRTH:
+        simple_condition: input.origin=="renacimiento"
+        action: set_origin
+        action_parameters:
+          origin: "renacimiento y apocalipsis previo"
+      UNKNOWN:
+        simple_condition: null
+        action: set_origin
+        action_parameters:
+          origin: "desconocido"
+    # ¿Qué final prefieres?
+    ending:
+      REDEMPTION:
+        simple_condition: input.ending=="redencion"
+        action: set_ending
+        action_parameters:
+          ending: "redención y paz"
+      CYCLE:
+        simple_condition: input.ending=="ciclo"
+        action: set_ending
+        action_parameters:
+          ending: "ciclo eterno y retorno"
+      CATASTROPHE:
+        simple_condition: input.ending=="catastrofe"
+        action: set_ending
+        action_parameters:
+          ending: "catástrofe y final trágico"
+      OPEN:
+        simple_condition: input.ending=="indefinido"
+        action: set_ending
+        action_parameters:
+          ending: "indefinido y reflexión"
+      UNKNOWN:
+        simple_condition: null
+        action: set_ending
+        action_parameters:
+          ending: "desconocido"
 actions_source_modules:
   - act.actions

@@ -9,7 +9,12 @@ client = OpenAI(
 completion = client.chat.completions.create(
     extra_body={},
     model="deepseek/deepseek-r1:free",
-    messages=[{"role": "user", "content": "Cual es la capital de Peru?"}],
+    messages=[
+        {
+            "role": "user",
+            "content": "De todas las mitoias cual es el dios mas poderoso, respueta breve",
+        }
+    ],
 )
 
 print(completion.choices[0].message.content)
