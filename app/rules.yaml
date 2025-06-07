@@ -1,24 +1,24 @@
 ---
 rules:
   default_rule_set:
-    # ¿Qué tipo de mundo prefieres?
+    # ¿qué tipo de mundo prefieres?
     world:
-      DARK:
-        simple_condition: input.land=="oscuro"
+      dark:
+        simple_condition: input.cultura=="oscuro"
         action: set_world
         action_parameters:
           cultura: "nordica,celta"
-      BALANCE:
-        simple_condition: input.land=="equilibrado"
+      balance:
+        simple_condition: input.cultura=="equilibrado"
         action: set_world
         action_parameters:
           cultura: "griega,hindu"
-      LIGHT:
-        simple_condition: input.land=="luminoso"
+      light:
+        simple_condition: input.cultura=="luminoso"
         action: set_world
         action_parameters:
           cultura: "egipcia,inca"
-      UNKNOWN:
+      unknown:
         simple_condition: null
         action: set_world
         action_parameters:
@@ -56,22 +56,22 @@ rules:
         simple_condition: input.creature=="dragon"
         action: set_creature
         action_parameters:
-          creature: "dragon y china"
+          creature: "dragon chino"
       PHOENIX:
         simple_condition: input.creature=="fenix"
         action: set_creature
         action_parameters:
-          creature: "fenix y edad media"
+          creature: "fenix bebe"
       SHADOW:
         simple_condition: input.creature=="sombra"
         action: set_creature
         action_parameters:
-          creature: "sombra y antagonista"
+          creature: "la mancha"
       WOLF:
         simple_condition: input.creature=="lobo"
         action: set_creature
         action_parameters:
-          creature: "lobo y nordico"
+          creature: "hombre lobo"
       UNKNOWN:
         simple_condition: null
         action: set_creature

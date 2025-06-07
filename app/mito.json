@@ -1,18 +1,138 @@
 {
   "nodes": [
-    { "id": "Zeus", "type": "dios", "cultura": "griega" },
-    { "id": "Thor", "type": "dios", "cultura": "nórdica" }
+    { "id": "nordica", "type": "cultura" },
+    { "id": "celta", "type": "cultura" },
+    { "id": "griega", "type": "cultura" },
+    { "id": "hindu", "type": "cultura" },
+    { "id": "egipcia", "type": "cultura" },
+    { "id": "inca", "type": "cultura" },
+    { "id": "heroe", "type": "arquetipo" },
+    { "id": "guerrero", "type": "arquetipo" },
+    { "id": "sabio", "type": "arquetipo" },
+    { "id": "mentor", "type": "arquetipo" },
+    { "id": "trickster", "type": "arquetipo" },
+    { "id": "redentor", "type": "arquetipo" },
+    { "id": "martir", "type": "arquetipo" },
+    { "id": "dragon", "type": "criatura" },
+    { "id": "fenix", "type": "criatura" },
+    { "id": "sombra", "type": "criatura" },
+    { "id": "lobo", "type": "criatura" },
+    { "id": "agua", "type": "elemento" },
+    { "id": "fuego", "type": "elemento" },
+    { "id": "aire", "type": "elemento" },
+    { "id": "tierra", "type": "elemento" },
+    { "id": "viaje", "type": "trama" },
+    { "id": "introspeccion", "type": "trama" },
+    { "id": "transformacion", "type": "trama" },
+    { "id": "ascension", "type": "trama" },
+    { "id": "espiritualidad", "type": "trama" },
+    { "id": "estabilidad", "type": "trama" },
+    { "id": "caida", "type": "trama" },
+    { "id": "viaje_del_heroe", "type": "estructura" },
+    { "id": "conflicto_con_dioses", "type": "estructura" },
+    { "id": "mito_de_origen", "type": "estructura" },
+    { "id": "linaje_oculto", "type": "estructura" },
+    { "id": "guerra_dioses", "type": "conflicto" },
+    { "id": "crisis_cosmica", "type": "conflicto" },
+    { "id": "traicion", "type": "conflicto" },
+    { "id": "secreto_prohibido", "type": "conflicto" },
+    { "id": "dios_solar", "type": "dios" },
+    { "id": "dios_dual", "type": "dios" },
+    { "id": "dios_natural", "type": "dios" },
+    { "id": "dios_caotico", "type": "dios" },
+    { "id": "japonesa", "type": "cultura" },
+    { "id": "sincretismo", "type": "cultura" },
+    { "id": "semilla_divina", "type": "origen" },
+    { "id": "rebelion", "type": "origen" },
+    { "id": "linaje_prohibido", "type": "origen" },
+    { "id": "renacimiento", "type": "origen" },
+    { "id": "redencion", "type": "final" },
+    { "id": "ciclo_eterno", "type": "final" },
+    { "id": "catastrofe", "type": "final" }
   ],
   "edges": [
+    { "from": "nordica", "to": "trickster", "relation": "arquetipo_asociado" },
+    { "from": "nordica", "to": "lobo", "relation": "criatura_tipica" },
+    { "from": "celta", "to": "oscuro", "relation": "tono_asociado" },
+    { "from": "griega", "to": "heroe", "relation": "arquetipo_comun" },
+    { "from": "hindu", "to": "mentor", "relation": "arquetipo_comun" },
+    { "from": "egipcia", "to": "dios_solar", "relation": "dios_asociado" },
+    { "from": "inca", "to": "dios_solar", "relation": "dios_asociado" },
     {
-      "from": "Zeus",
-      "to": "Zeus_style",
-      "relation": "arquetipo_representativo"
+      "from": "sabio",
+      "to": "mito_de_origen",
+      "relation": "estructura_asociada"
+    },
+    { "from": "mentor", "to": "sabio", "relation": "arquetipo_relacionado" },
+    { "from": "dragon", "to": "china", "relation": "origen_cultural" },
+    { "from": "fenix", "to": "renacimiento", "relation": "simboliza" },
+    { "from": "sombra", "to": "trickster", "relation": "asociado_a" },
+    { "from": "lobo", "to": "territorio", "relation": "simboliza" },
+    { "from": "agua", "to": "viaje", "relation": "trama_asociada" },
+    { "from": "agua", "to": "introspeccion", "relation": "trama_asociada" },
+    { "from": "fuego", "to": "transformacion", "relation": "trama_asociada" },
+    { "from": "fuego", "to": "trickster", "relation": "arquetipo_relacionado" },
+    { "from": "aire", "to": "ascension", "relation": "trama_asociada" },
+    { "from": "aire", "to": "espiritualidad", "relation": "trama_asociada" },
+    { "from": "tierra", "to": "estabilidad", "relation": "trama_asociada" },
+    { "from": "tierra", "to": "caida", "relation": "trama_asociada" },
+    { "from": "heroe", "to": "viaje_del_heroe", "relation": "estructura" },
+    {
+      "from": "trickster",
+      "to": "conflicto_con_dioses",
+      "relation": "estructura"
+    },
+    { "from": "sabio", "to": "mito_de_origen", "relation": "estructura" },
+    { "from": "martir", "to": "redencion", "relation": "final_comun" },
+    { "from": "antiheroe", "to": "caida", "relation": "simbolismo" },
+    {
+      "from": "guerrero",
+      "to": "guerra_dioses",
+      "relation": "conflicto_comun"
+    },
+    { "from": "guerra_dioses", "to": "epica", "relation": "genero" },
+    {
+      "from": "crisis_cosmica",
+      "to": "renacimiento",
+      "relation": "consecuencia"
     },
     {
-      "from": "Thor",
-      "to": "Thor_style",
-      "relation": "arquetipo_representativo"
-    }
+      "from": "traicion",
+      "to": "trickster",
+      "relation": "arquetipo_implicado"
+    },
+    {
+      "from": "secreto_prohibido",
+      "to": "sabio",
+      "relation": "relacionado_con"
+    },
+    { "from": "dios_dual", "to": "hindu", "relation": "cultura_asociada" },
+    { "from": "dios_natural", "to": "tierra", "relation": "elemento_asociado" },
+    {
+      "from": "dios_caotico",
+      "to": "trickster",
+      "relation": "arquetipo_asociado"
+    },
+    { "from": "japonesa", "to": "espiritualidad", "relation": "valor_central" },
+    { "from": "sincretismo", "to": "aleatorio", "relation": "estructura" },
+    {
+      "from": "semilla_divina",
+      "to": "dios_solar",
+      "relation": "creacion_asociada"
+    },
+    { "from": "rebelion", "to": "guerra_dioses", "relation": "desencadena" },
+    {
+      "from": "linaje_prohibido",
+      "to": "huerfano",
+      "relation": "estructura_relacionada"
+    },
+    { "from": "renacimiento", "to": "catastrofe", "relation": "despues_de" },
+    { "from": "redencion", "to": "paz", "relation": "conduce_a" },
+    {
+      "from": "ciclo_eterno",
+      "to": "retorno",
+      "relation": "estructura_narrativa"
+    },
+    { "from": "catastrofe", "to": "final_tragico", "relation": "tipo_de_final" }
   ]
 }
