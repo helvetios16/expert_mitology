@@ -1,7 +1,7 @@
 ---
 rules:
   default_rule_set:
-    # ¿qué tipo de mundo prefieres?
+    # ¿Qué tipo de mundo prefieres?
     world:
       dark:
         simple_condition: input.cultura=="oscuro"
